@@ -20,7 +20,6 @@
         .wrapper>header>nav{
             /* border : 1px solid; */
             /* height : 50px; */
-            
         }
 
         /* nav's menu */
@@ -29,8 +28,7 @@
             justify-content: space-between;
             height:50px;
             background-color: orange;
-            transition:0.5s;
-            
+            transition: .5s;
         }
         .wrapper>header>nav>ul.main-menu>li{
             /* border:1px solid; */
@@ -50,14 +48,15 @@
         .wrapper>header>nav>ul.main-menu>li>ul.sub-menu{
             /* border:1px solid; */
             width:100%;
-            height:100%;
+            height : 100%;
+            transition:0.5s;
             /* ! */
             position:absolute;
             left:0;
             top:50px;
 
             display:none;
-            opacity: 0;
+            
             
         }
         .wrapper>header>nav>ul.main-menu>li>ul.sub-menu>li{
@@ -70,14 +69,16 @@
             display:block;
             color : white;
         }
-        
+    
         .wrapper>header>nav>ul.main-menu:hover>li>.sub-menu{
-            display:block;
-            transition:0.5s;
+            display:block; 
             opacity: 1;
+            height:100%;
         }
+        
         .wrapper>header>nav>ul.main-menu:hover{
             height:350px;
+            overflow: hidden;
             
         }
 

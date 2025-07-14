@@ -58,6 +58,31 @@
         .wrapper>main>section{}
         /* footer */
         .wrapper>footer{}
+
+
+        .fixed-menu{
+            position:fixed;
+            right:0;
+            top:60%;
+            min-width :400px;
+            height :300px;
+            border : 1px solid;
+            margin : 20px;
+            display:flex;
+            justify-content: left;
+            align-items: center;
+            flex-direction: column;
+        }
+        .fixed-menu li{
+            min-height : 50px;
+            border : 1px solid;
+            margin : 10px;
+            padding : 0 20px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        
+        }
     </style>
 </head>
 <body>
@@ -115,6 +140,16 @@
             <section></section>
         </main>
         <footer></footer>
+    </div>
+
+
+    <div class="fixed-menu">
+        <h1>메뉴만들기</h1>
+        <ul>
+            <li>1 mainmenu의 li hover 시 dropdown</li>
+            <li>2 mainmenu hover시 dropdown</li>
+            <li>3 mainmenu의 li 세로배치</li>
+        </ul>
     </div>
 </body>
 </html>
