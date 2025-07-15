@@ -28,19 +28,61 @@
         }
 
         /* layout */
-        .wrapper {}
+        .wrapper {
+            margin: 0 auto;
+            
+            
+        }
 
         /* header */
-        .wrapper>header {}
+        .wrapper>header {
+            width: auto;
+        }
 
-        .wrapper>header>.top-header {}
+        .wrapper>header>.top-header {
+            
+        }
 
-        .wrapper>header>nav {}
+        .wrapper>header>nav {
+            border: 1px solid;
+            display: flex;
+            align-items: row;
+            background-color: black;
+            color: white;
+            
+        }
+        .wrapper>header>nav>.nav-logo{
+            font-size: 50px;
+            align-items: center;
+            
+            
+        }
+        .wrapper>header>nav>.nav-menu{
+            display: flex;
+            align-items: center;
+            padding: 30px;
+            
+            
+        }
+        
 
         /* main  */
-        .wrapper>main {}
+        .wrapper>main {
+            padding: 20px;
+        }
+        
 
-        .wrapper>main>section {}
+        .wrapper>main>section>.card-container {
+            border: 1px solid;
+            display: flex;
+            padding: 20px;
+            flex-wrap: wrap;
+            justify-content: left;
+        }
+        .wrapper>main>section>.container{
+            border: 1px solid;
+
+        }
 
         /* footer */
         .wrapper>footer {}
@@ -52,7 +94,7 @@
     <div class="wrapper">
         <header>
             <div class="top-header">
-                1. 네비게이션 바 레이아웃
+                <h2>1. 네비게이션 바 레이아웃</h2>
             </div>
             <nav>
                 <div class="nav-logo">Logo</div>
