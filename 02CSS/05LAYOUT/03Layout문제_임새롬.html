@@ -8,7 +8,6 @@
     <style>
         * {
             box-sizing: border-box;
-
         }
 
         /* common */
@@ -33,17 +32,96 @@
         /* header */
         .wrapper>header {}
 
-        .wrapper>header>.top-header {}
+        .wrapper>header>.top-header {
+            height:50px;
+            padding:10px;
+        }
 
-        .wrapper>header>nav {}
+        .wrapper>header>nav {
+            height:50px;
+            /* border:1px solid; */
+            background-color:black;
+            display:flex;
+            justify-content:space-between;
+        }
+        .wrapper>header>nav>div.nav-logo{
+            color:white;
+            /* border:1px solid; */
+            margin:10px;
+            font-size:20px;
+        }
+        
+        .wrapper>header>nav>ul.nav-menu{
+            display:flex;
+            color:white;
+            
+            /* border:1px solid; */
+        }
+        .wrapper>header>nav>ul.nav-menu>li{
+            /* border:1px solid; */
+            margin:15px;
+            font-size:12px;
+        }
+
 
         /* main  */
         .wrapper>main {}
 
         .wrapper>main>section {}
 
+        .wrapper>main>section>div.card-container{
+            display:flex;
+            justify-content: left;
+            gap:15px;
+            padding:15px;
+        }
+        .wrapper>main>section>div.card-container>div.card{
+            border:1px solid;
+            border-radius:10px;
+            padding:15px;
+        }
+
+        .wrapper>main>section>div.container{
+            border:1px solid;
+            border-radius:10px;
+            padding:5px;
+            margin:15px;
+            height:250px;
+        }
+        .wrapper>main>section>div.container>div.media-item{
+            /* border:1px solid; */
+            display:flex;
+        }
+        .wrapper>main>section>div.container>div.media-item>div.media-img{
+            /* border:1px solid; */
+            width:150px;
+            background-color:lightgray;
+            margin:10px;
+        }
+        .wrapper>main>section>div.container>div.media-item>div.media-content{
+            padding:5px;
+            /* border:1px solid; */
+        }
+        /* 미디어 컨텐츠 레이아웃에서 뉴스제목, 블로그 포스트 글 위로 올리기?? */
+
         /* footer */
         .wrapper>footer {}
+
+        .wrapper>footer>footer.footer{
+            height:100px;
+            background-color:black;
+            padding:5px;
+            margin:5px;
+            border:1px solid;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+        .wrapper>footer>footer.footer>div.footer-section{
+            /* border:1px solid; */
+            color:white;
+        }
+
     </style>
 </head>
 
@@ -65,7 +143,6 @@
             </nav>
         </header>
         <main>
-
             <section>
                 <h2>2. 카드 레이아웃</h2>
                 <div class="card-container">
