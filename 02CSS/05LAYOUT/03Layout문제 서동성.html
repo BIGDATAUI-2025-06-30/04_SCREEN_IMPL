@@ -31,11 +31,56 @@
         .wrapper {}
 
         /* header */
-        .wrapper>header {}
+        .wrapper>header {
+            border: 1px solid;
+        }
 
-        .wrapper>header>.top-header {}
+        .wrapper>header>.top-header {
+            /* border: 1px solid;  */
+            /* height: 50px;
+           line-height: 50px;
+           margin-left: 20px; */
 
-        .wrapper>header>nav {}
+            font-weight: bold;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            height: 50px;
+            /* 높이 추가하면 더 명확하게 중앙 정렬 */
+
+
+
+        }
+
+        .wrapper>header>nav {
+            /* border: 1px solid; */
+            background-color: black;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        header>nav>div.nav-logo {
+            color: white;
+            font-size: 1.5em;
+            /* 로고 글자 크기 증가 */
+            margin-right: auto;
+        }
+
+        .wrapper>header>nav>.nav-menu {
+            /* border: 1px solid; */
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            /* 메뉴 간 간격 10px */
+        }
+
+        .wrapper>header>nav>ul>li {
+            color: white;
+            font-size: 0.9em;
+            /* 다소 작게 */
+
+        }
 
         /* main  */
         .wrapper>main {}
