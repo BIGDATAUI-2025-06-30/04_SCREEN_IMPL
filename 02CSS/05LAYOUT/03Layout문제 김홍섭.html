@@ -8,7 +8,6 @@
     <style>
         * {
             box-sizing: border-box;
-
         }
 
         /* common */
@@ -34,16 +33,90 @@
         .wrapper>header {}
 
         .wrapper>header>.top-header {}
+        .wrapper>header>.top-header>h2{
+            margin-left: 15px;
+        }
 
-        .wrapper>header>nav {}
+        .wrapper>header>nav {
+            background-color: black;
+            display: flex;
+            align-items: center;
+            color: white;
+            height: 80px;
+            position: relative;
+        }
+        .wrapper>header>nav>.nav-logo {
+            justify-content: center;
+            display: flex;
+            display: inline;
+            margin-left: 15px;
+            font-size: 25px;
+            position: absolute;
+            
+        }
+        .wrapper>header>nav>ul{
+            width: 400px;
+            /* border: 1px solid white; */
+            display: flex;
+            margin-left: 1500px;
+            justify-content: space-around;
+            position: absolute;
+            font-size: 15px;
+        }
 
         /* main  */
         .wrapper>main {}
 
-        .wrapper>main>section {}
+        .wrapper>main>section {
+            
+        }
+        .wrapper>main>section>h2 {
+            margin-left: 15px;
+        }
+        .wrapper>main>section>.card-container{
+            display: flex;
+        }
+
+        .wrapper>main>section>.card-container>.card{
+            font-size: 14px;
+            margin-left: 20px;
+            padding-top:10px;
+            padding-bottom:10px;
+            padding-left: 15px;
+            width: 435px;
+            border: 1px solid;
+            border-radius: 10px;
+
+        }
+        .wrapper>main>section>.container{
+            border-radius: 10px;
+            border: 1px solid;
+            margin: 20px;
+        }
+        .wrapper>main>section>.container>.media-item{
+            
+        }
+        .wrapper>main>section>.container>.media-img{
+            border: 1px solid;
+        }
 
         /* footer */
         .wrapper>footer {}
+        .wrapper>footer>h2{
+            margin-left: 15px;
+        }
+        .wrapper>footer>.footer {
+            display: flex;
+            justify-content: space-around;
+            color: white;
+            background-color: black;
+            height: 150px;
+
+        }
+        .wrapper>footer>.footer>.footer-section{
+            margin-top: 35px;
+            margin-left: -400px;
+        }
     </style>
 </head>
 
@@ -52,7 +125,7 @@
     <div class="wrapper">
         <header>
             <div class="top-header">
-                1. 네비게이션 바 레이아웃
+                <h2>1. 네비게이션 바 레이아웃</h2>
             </div>
             <nav>
                 <div class="nav-logo">Logo</div>
