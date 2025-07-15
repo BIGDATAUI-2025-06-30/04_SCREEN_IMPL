@@ -61,6 +61,7 @@
             
             background-color: black;
             color: white;
+            font-size: 30px;
         }
 
         .wrapper>header>nav>.nav-logo>.nav-menu{
@@ -72,10 +73,15 @@
         /* main  */
         .wrapper>main {}
         
+        .wrapper>main>section{}
+        .wrapper>main>section>h2{
+            padding-left: 20px;
+        }
         .wrapper>main>section>.card-container{
             
             display: flex;
             justify-content: space-evenly;
+            
 
         }
 
@@ -101,7 +107,15 @@
     
         }
 
-        .wrapper>main>section>.container>.media-item>.media-img{}
+        .wrapper>main>section>.container>.media-item>.media-img{
+            width: 150px;
+            height: 100px;
+            background-color: lightgray;
+            margin: 10px;
+            margin-right: 15px;
+            border-radius: 5px;
+
+        }
 
         .wrapper>main>section>.container>.media-item>.media-content{}
 
@@ -109,13 +123,23 @@
         .wrapper>main>section {}
 
         /* footer */
+        .wrapper>footer>h2 {
+            padding-left: 20px;
+        }
         .wrapper>footer>.footer {
             background-color: black;
             display: flex;
-            justify-content: space-between;
+            justify-content: left;
+            gap: 20%;
+            padding-left: 30px;
+            
+            align-items: center;
+            height: 100px;
         }
         .wrapper>footer>.footer>.footer-section{
             color: white;
+            font-size: 12px;
+            
 
         }
     </style>
