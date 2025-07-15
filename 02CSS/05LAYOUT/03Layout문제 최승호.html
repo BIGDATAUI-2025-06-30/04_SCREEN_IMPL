@@ -31,19 +31,94 @@
         .wrapper {}
 
         /* header */
-        .wrapper>header {}
+        .wrapper>header {
 
-        .wrapper>header>.top-header {}
+            bottom: 10px; 
+            background-color: black;
+            color: white;
+            
+        }
 
-        .wrapper>header>nav {}
+        .wrapper>header>.top-header {
+            height: 100px;
+            background-color: white;
+            color: black;
+            font-size: 1.8rem;
+
+            display: flex;
+            align-items: center; /* 세로 중앙 정렬*/
+        }
+
+        .wrapper>header>nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* padding:0 40px; */
+            height : 70px;
+            background-color: black;
+        }
+
+        .nav-logo{
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .nav-menu{
+            display: flex;
+            align-items: center;
+            gap:20px;
+            
+        }
+
+        .card{
+            border: 1px solid black;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .card:nth-child(1){
+            flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: 450px;
+        }
+        .card:nth-child(2){
+            flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: 450px;
+        }
+        .card:nth-child(3){
+            flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: 450px;
+        }
+        .card-container{
+            display: flex;
+            flex-wrap: wrap;
+        }
 
         /* main  */
         .wrapper>main {}
 
-        .wrapper>main>section {}
+        .wrapper>main>section {
+            border: 1px solid;
+        }
 
         /* footer */
-        .wrapper>footer {}
+        .wrapper>footer {
+
+            /* background-color: black;
+            color: white; */
+        }
+        .footer-section{
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
     </style>
 </head>
 
