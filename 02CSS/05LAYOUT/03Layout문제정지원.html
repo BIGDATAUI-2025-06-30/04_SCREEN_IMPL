@@ -33,17 +33,62 @@
         /* header */
         .wrapper>header {}
 
-        .wrapper>header>.top-header {}
-
-        .wrapper>header>nav {}
+        .wrapper>header>.top-header {
+            width:100%;
+            height:50px;
+            border:1px solid;
+        }
+        .wrapper>header>nav{
+            border:1px solid;
+        }
+        .wrapper>header>nav>.nav-menu{
+            display:flex;
+            flex-wrap: wrap;
+            align-items: right;
+         }
+        .wrapper>header>nav>.nav-menu:nth-child(1){
+            flex-grow:1;
+        }
+        .wrapper>header>nav>.nav-menu
+        .wrapper>header>nav>.nav-menu
+        .wrapper>header>nav>.nav-menu
 
         /* main  */
         .wrapper>main {}
 
-        .wrapper>main>section {}
+        .wrapper>main>section>.card-container {
+            display:flex;
+            height:auto;
+            border:1px solid transparent;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .wrapper>main>section>.card-container>.card{
+            border:1px solid;
+            border-radius: 10px;
+            flex-shrink: 0;
+            flex-basis: 350px;
+        }
+        .wrapper>main>section>.container{
+            border:1px solid;
+            border-radius: 10px;
+        }
+        .wrapper>main>section>.container>.media-item{}
+        .wrapper>main>section>.container>.media-item>.media-image{
+            width:50px;
+            height:50px;
+
+        }
+        .wrapper>main>section>.container>.media-item>.media-content{}
+
 
         /* footer */
-        .wrapper>footer {}
+        .wrapper>footer {
+
+            
+        }
+        .wrapper>footer>.footer {}
+        .wrapper>footer>.footer>.footer-section {}
     </style>
 </head>
 
@@ -87,7 +132,9 @@
                 <h2>3. 미디어 컨텐츠 레이아웃</h2>
                 <div class="container">
                     <div class="media-item">
-                        <div class="media-img"></div>
+                        <div class="media-img">
+                            
+                        </div>
                         <div class="media-content">
                             <h3>뉴스 제목</h3>
                             <p>뉴스 내용이 들어갑니다. 이미지와 텍스트가 나란히 배치되는 레이아웃입니다.</p>
