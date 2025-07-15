@@ -31,16 +31,77 @@
         .wrapper {}
 
         /* header */
-        .wrapper>header {}
+        .wrapper>header {
+            
+        }
 
         .wrapper>header>.top-header {}
 
-        .wrapper>header>nav {}
+        .wrapper>header>nav {
+            background-color:black;
+            color:white;
+            width:100%;
+            display:flex;
+            /* margin: 20px; */
+            position: relative;
+            
+        }
+        .wrapper>header>nav>ul.nav-menu{
+            color: white;
+            display:flex;
+            position: absolute;
+            right: 0;
+            padding-right:10px;
+        }
+        .wrapper>header>nav>ul.nav-menu>li{
+            padding: 0 10px;
+        }
 
         /* main  */
-        .wrapper>main {}
+        .wrapper>main {
+            
+        }
 
-        .wrapper>main>section {}
+        .wrapper>main>section {
+            
+        }
+        .wrapper>main>section>.card-container{
+            display:flex;
+            justify-content: space-between;
+            
+            
+        }
+        .wrapper>main>section>.card-container>.card{
+            border:2px solid;
+            border-radius: 10px;
+            margin: 0 10px;
+        }
+
+        .wrapper>main{}        
+        .wrapper>main>section{}        
+        .wrapper>main>section>.container{
+            border: 2px solid;
+            border-radius: 10px;
+            margin: 0 10px;
+        }
+        .wrapper>main>section>.container>.media-item{
+            position:relative;
+            flex-direction: column;
+            margin-bottom: 100px;
+            
+        }
+        .wrapper>main>section>.container>.media-item>.media-image{
+            
+        }
+        .wrapper>main>section>.container>.media-item>.media-content{
+            position:relative;
+            left: 200px;
+            /* background-color: brown; */
+            
+
+        }
+
+
 
         /* footer */
         .wrapper>footer {}
@@ -52,7 +113,7 @@
     <div class="wrapper">
         <header>
             <div class="top-header">
-                1. 네비게이션 바 레이아웃
+                <h2>1. 네비게이션 바 레이아웃</h2>
             </div>
             <nav>
                 <div class="nav-logo">Logo</div>
