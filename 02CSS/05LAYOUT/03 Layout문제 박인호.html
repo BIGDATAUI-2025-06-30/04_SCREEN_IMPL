@@ -33,17 +33,91 @@
         /* header */
         .wrapper>header {}
 
-        .wrapper>header>.top-header {}
+        .wrapper>header>.top-header {
+            font-size: 30px;
+            padding: 15px;
+            font-weight: bold;
+            
+        }
+        .wrapper>header>nav {
+            display: flex;
+            gap: 30px;
+            height: 70px;
+            
+        }
+        .wrapper>header>nav>ul{
+                display: flex;
+                justify-content: right;
+                gap: 30px;
+                background-color: black;
+                color: white;
+                width: 100%;
+                align-items: center;
+        }
+        .wrapper>header>nav>ul>li{
+                margin-right: 30px;
+        }
+        .wrapper>header>nav>.nav-logo{
+            
+            background-color: black;
+            color: white;
+        }
 
-        .wrapper>header>nav {}
+        .wrapper>header>nav>.nav-logo>.nav-menu{
+            /* display: flex; */
+            
+        }
 
+        
         /* main  */
         .wrapper>main {}
+        
+        .wrapper>main>section>.card-container{
+            
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+
+        .wrapper>main>section>.card-container>.card{
+            border: 1px solid;
+            border-radius: 20px;
+            height: 150px;
+            
+            display: flex;
+            align-items: center; 
+        }
+
+        .wrapper>main>section>.container{
+            border: 1px solid;
+            border-radius: 10px;
+
+            margin: 20px;
+            padding: 10px;
+        }
+
+        .wrapper>main>section>.container>.media-item{
+            display: flex;
+    
+        }
+
+        .wrapper>main>section>.container>.media-item>.media-img{}
+
+        .wrapper>main>section>.container>.media-item>.media-content{}
+
 
         .wrapper>main>section {}
 
         /* footer */
-        .wrapper>footer {}
+        .wrapper>footer>.footer {
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+        }
+        .wrapper>footer>.footer>.footer-section{
+            color: white;
+
+        }
     </style>
 </head>
 
