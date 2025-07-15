@@ -31,62 +31,54 @@
         .wrapper {}
 
         /* header */
-        .wrapper>header {
-            border: 1px solid;
-        }
+        .wrapper>header {}
 
-        .wrapper>header>.top-header {
-            /* border: 1px solid;  */
-            /* height: 50px;
-           line-height: 50px;
-           margin-left: 20px; */
-
-            font-weight: bold;
-            margin-left: 10px;
-            display: flex;
-            align-items: center;
-            height: 50px;
-            /* 높이 추가하면 더 명확하게 중앙 정렬 */
-
-
-
-        }
+        .wrapper>header>.top-header {}
 
         .wrapper>header>nav {
-            /* border: 1px solid; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
             background-color: black;
+            color:white;
+
+        }
+        .wrapper>header>nav>.nav-logo{
+            
+        }
+        .wrapper>header>nav>.nav-menu{
             display: flex;
-            align-items: center;
-            padding: 10px 20px;
         }
-
-        header>nav>div.nav-logo {
-            color: white;
-            font-size: 1.5em;
-            /* 로고 글자 크기 증가 */
-            margin-right: auto;
-        }
-
-        .wrapper>header>nav>.nav-menu {
-            /* border: 1px solid; */
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            /* 메뉴 간 간격 10px */
-        }
-
-        .wrapper>header>nav>ul>li {
-            color: white;
-            font-size: 0.9em;
-            /* 다소 작게 */
-
+        .wrapper>header>nav>.nav-menu>li{
+            padding: 0 20px;
         }
 
         /* main  */
         .wrapper>main {}
 
         .wrapper>main>section {}
+        .wrapper>main>section>.card-container {
+            display:flex;
+            gap:10px;
+        }
+        .wrapper>main>section>.card-container>.card {
+            border: 1px solid;
+            border-radius: 5px;
+            padding: 10px;
+        }
 
+        /*  */
+        .wrapper>main>section:nth-child(2)>.container{
+            display: flex;
+        }
+        .wrapper>main>section:nth-child(2)>.container>.media-item{}
+        .wrapper>main>section:nth-child(2)>.container>.media-item>.meida-img{
+            width : 200px;
+            height : 200px;
+            background-color: lightgray;
+        }
+        .wrapper>main>section:nth-child(2)>.container>.media-item>.meida-content{}
         /* footer */
         .wrapper>footer {}
     </style>
