@@ -8,6 +8,7 @@
     <style>
         * {
             box-sizing: border-box;
+
         }
 
         /* common */
@@ -33,103 +34,124 @@
         .wrapper>header {}
 
         .wrapper>header>.top-header {}
-        .wrapper>header>.top-header>h2{
-            margin-left: 15px;
-        }
 
         .wrapper>header>nav {
+            display: flex;
             background-color: black;
-            display: flex;
-            align-items: center;
-            color: white;
+            color:white;
             height: 80px;
-            position: relative;
+            justify-content: space-between;
+            align-items: center;
         }
-        .wrapper>header>nav>.nav-logo {
-            justify-content: center;
+        .wrapper>header>nav>.nav-logo{}
+        .wrapper>header>nav>.nav-menu{
             display: flex;
-            display: inline;
-            margin-left: 15px;
-            font-size: 25px;
-            position: absolute;
-            
         }
-        .wrapper>header>nav>ul{
-            width: 400px;
-            /* border: 1px solid white; */
-            display: flex;
-            margin-left: 1500px;
-            justify-content: space-around;
-            position: absolute;
-            font-size: 15px;
+        
+        .wrapper>header>nav>.nav-menu>li{
+            padding: 0 20px;
         }
-
         /* main  */
         .wrapper>main {}
 
-        .wrapper>main>section {
-            
-        }
-        .wrapper>main>section>h2 {
-            margin-left: 15px;
-        }
-        .wrapper>main>section>.card-container{
+        .wrapper>main>section {}
+        .wrapper>main>section>.card-container {
             display: flex;
-        }
+            gap: 10px;
 
-        .wrapper>main>section>.card-container>.card{
-            font-size: 12px;
-            margin-left: 20px;
-            padding-top:25px;
-            padding-bottom:10px;
-            padding-left: 15px;
-            width: 400px;
+            flex-wrap: wrap;
+        }
+        .wrapper>main>section>.card-container>.card {
             border: 1px solid;
             border-radius: 10px;
+            padding: 10px;
+
+
+            /* 각 카드에 플렉스 반응처리 */
+            flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: 480px;
+
+            /* 너무 커지는 것을 방지할 때 맥스 width 걸기 */
+            max-width: 480px;
 
         }
-        .wrapper>main>section>.container{
+        .wrapper>main>section:nth-child(2)>.container{
+            display: flex;
+            flex-direction: column;
+            border: 1px solid;
             border-radius: 10px;
-            border: 1px solid;
-            margin: 20px;
-            padding-top: 10px;
-            padding-bottom: 10px;
         }
-        .wrapper>main>section>.container>.media-item{
-            
+        .wrapper>main>section:nth-child(2)>.container>.media-item{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+            margin-right: 10px;
         }
-        .wrapper>main>section>.container>.media-img{
-            border: 1px solid;
-            /* 이거 이미지 어떻게 만들어요 진짜 모르겠어요 */
-            /* 이거 이미지 어떻게 만들어요 진짜 모르겠어요 */
-            /* 이거 이미지 어떻게 만들어요 진짜 모르겠어요 */
-            /* 이거 이미지 어떻게 만들어요 진짜 모르겠어요 */
-            /* 이거 이미지 어떻게 만들어요 진짜 모르겠어요 */
-        }
-        .wrapper>main>section>.container>.media-item>.media-content{
-            padding-left: 10px;
+        .wrapper>main>section:nth-child(2)>.container>.media-item>.media-img{
+            width: 200px;
+            height: 200px;
+            background-color: lightgray;
         }
 
         /* footer */
-        .wrapper>footer {}
-        .wrapper>footer>h2{
-            margin-left: 15px;
+        .wrapper>footer {
+            
         }
-        .wrapper>footer>.footer {
-            display: flex;
-            /* justify-content: space-around; */
-            color: white;
+        .wrapper>footer>.footer{
             background-color: black;
-            padding: 10px;
-            /* position: relative; */
+            color: white;
+
+            display: flex;
+            /* 왼쪽으로 붙이고 싶어서 space-between 제거 */
+            /* justify-content: space-between; */
+            gap: 10px;
+            padding: 10px 0;
+
+            /* 마찬가지로 부모에서 flex-wrap으로 감싸기 */
+            flex-wrap: wrap;
+
+
         }
         .wrapper>footer>.footer>.footer-section{
             width: 100%;
             min-height: 150px;
             border: 1px solid;
             border-radius: 10px;
-            /* position: absolute; */
+
+
+            /* 증감,축소,기본크기,최대크기 걸어주기 */
+            flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: 480px;
+            max-width: 480px;
+
         }
+
+        /* ????.. */
+
+        /* @media(option){} */
+        @media(max-width:1080px){
+        /* 1080 이하인 경우 @media(미디어 쿼리??)의 스타일을 적용한다. */
+        /* 네비게이션 부분을 바꾸고 싶기 때문에 네비게이션 css 부분만 긁어오기 */
+            .wrapper>header>nav {
+                flex-direction: column; /* 1080 밑이면 수직배치로 바꾸기*/
+                height: auto;
+                font-size: 1.7rem;
+            }
+            .wrapper>header>nav>.nav-logo{
+                text-align: center;
+            }
+            .wrapper>header>nav>.nav-menu{
+                flex-direction: column;
+            }
+        
+            .wrapper>header>nav>.nav-menu>li{
+            }
+        }
+        /* 괄호 똑바로 맞추기.. */
+
     </style>
 </head>
 
@@ -138,7 +160,7 @@
     <div class="wrapper">
         <header>
             <div class="top-header">
-                <h2>1. 네비게이션 바 레이아웃</h2>
+                1. 네비게이션 바 레이아웃
             </div>
             <nav>
                 <div class="nav-logo">Logo</div>
@@ -193,7 +215,7 @@
         </main>
         <footer>
             <h2>4. 반응형 푸터</h2>
-            <footer class="footer">
+            <div class="footer">
                 <div class="footer-section">
                     <h3>About Us</h3>
                     <p>회사 소개 내용이 들어갑니다.</p>
@@ -206,7 +228,7 @@
                     <h3>Follow Us</h3>
                     <p>소셜 미디어 링크가 들어갑니다.</p>
                 </div>
-            </footer>
+            </div>
         </footer>
     </div>
 </body>
