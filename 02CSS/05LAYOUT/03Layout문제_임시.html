@@ -38,10 +38,10 @@
         .wrapper>header>nav {
             display: flex;
             justify-content: space-between;
-            align-items:center;
-            height:60px;
+            align-items: center;
+            height: 60px;
             background-color: black;
-            color:white;
+            color: white;
         }
 
         .wrapper>header>nav>.nav-logo {}
@@ -58,32 +58,61 @@
         .wrapper>main {}
 
         .wrapper>main>section {}
-        .wrapper>main>section>.card-container {
-            display:flex;
-            gap:10px;
 
-        
+        .wrapper>main>section>.card-container {
+            display: flex;
+            gap: 10px;
+
+
         }
+
         .wrapper>main>section>.card-container>.card {
-            border:1px solid;
+            border: 1px solid;
             border-radius: 5px;
-            padding : 10px;     
+            padding: 10px;
         }
 
         /*  */
-        .wrapper>main>section:nth-child(2)>.container{
-            display:flex;
+        .wrapper>main>section:nth-child(2)>.container {
+            display: flex;
         }
-        .wrapper>main>section:nth-child(2)>.container>.media-item{}
-        .wrapper>main>section:nth-child(2)>.container>.media-item>.media-img{
-            width : 200px;
-            height : 200px;
+
+        .wrapper>main>section:nth-child(2)>.container>.media-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border: 1px solid;
+            border-radius: 10px;
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        .wrapper>main>section:nth-child(2)>.container>.media-item>.media-img {
+            width: 200px;
+            height: 200px;
             background-color: lightgray;
         }
-        .wrapper>main>section:nth-child(2)>.container>.media-item>.media-content{}
+
+        .wrapper>main>section:nth-child(2)>.container>.media-item>.media-content {}
 
         /* footer */
         .wrapper>footer {}
+
+        .wrapper>footer>.footer {
+            background-color: black;
+            color: white;       
+            
+            display:flex;
+            justify-content: space-between;
+            gap:10px;
+            padding:10px 0;
+        }
+        .wrapper>footer>.footer>.footer-section{
+            width:100%;
+            min-height:150px;
+            border : 1px solid;
+            border-radius: 10px;
+        }
     </style>
 </head>
 
@@ -147,7 +176,7 @@
         </main>
         <footer>
             <h2>4. 반응형 푸터</h2>
-            <footer class="footer">
+            <div class="footer">
                 <div class="footer-section">
                     <h3>About Us</h3>
                     <p>회사 소개 내용이 들어갑니다.</p>
@@ -160,7 +189,7 @@
                     <h3>Follow Us</h3>
                     <p>소셜 미디어 링크가 들어갑니다.</p>
                 </div>
-            </footer>
+            </div>
         </footer>
     </div>
 </body>
