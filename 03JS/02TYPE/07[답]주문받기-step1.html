@@ -110,6 +110,17 @@
         //---------------------------------------
         // step-1 - 상호명 선택하기 채우기
         //---------------------------------------
+        const selectRestorantEl = document.querySelector('.select-restorant');
+        console.log(selectRestorantEl)
+        //  
+        중구맛집_data.forEach((item)=>{
+            //새노드생성
+            const option =  document.createElement("option");
+            //option에 상호명 저장
+            option.innerHTML=item.BZ_NM;
+            //Select의 마지막 노드(마지막자식노드)로 연결
+            selectRestorantEl.appendChild(option);
+        })
 
         // step-2
 
