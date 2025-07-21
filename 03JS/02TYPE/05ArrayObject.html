@@ -135,7 +135,7 @@
         // console.log(maped_02);
 
         
-                let employees = [
+        let employees = [
             { id: 1, name: "김철수", age: 35, department: "개발", salary: 6000, years: 10 },
             { id: 2, name: "이영희", age: 28, department: "디자인", salary: 5000, years: 5 },
             { id: 3, name: "박지성", age: 40, department: "마케팅", salary: 7000, years: 15 },
@@ -145,14 +145,50 @@
             { id: 7, name: "강호동", age: 50, department: "경영", salary: 8500, years: 25 },
             { id: 8, name: "유재석", age: 42, department: "마케팅", salary: 7500, years: 18 },
             { id: 9, name: "송중기", age: 32, department: "개발", salary: 6200, years: 8 },
-            { id: 10, name: "수지", age: 26, department: "디자인", salary: 4800, years: 3 }
+            { id: 10, name: "수지", age: 26,  department: "디자인", salary: 4800, years: 3 }
         ];
 
         // 연봉이(salary) 6000이상이면서 근속연수(years)가 7년이상인(item.salary>=6000 && item.years>=7) 직원만 필터링해서 배열로 저장 확인
+        // const result1 =  employees.filter((item)=>{return item.salary>=6000 && item.years>=7})   
+        // console.log(result1);
+
+
+
+
         // 모든 직원의 연봉(salary) 기준으로 내림차순 정렬한 배열 새로 만들기
+        // employees.sort((a,b)=>{return b.salary-a.salary;})
+        // console.log(employees)
+
+
         // 모든 직원의 연봉(salary) 에 근속연수*100 만큼의 보너스를 추가하여 total_salary필드를 추가한 배열을 반환
+        // const result3 = employees.map((item)=>{
+        //     item = {...item,"total_salary": item.salary+(item.years*100) }
+        //     return item;
+        // })
+
+        // console.log(result3);
+
         // department(부서) 별로 직원들의 연봉총합을 구하세요
+        // sum = {"개발": "", "마케팅":""}
+        // console.log(employees)
+        // const result4 = employees.reduce((sum,item)=>{
+        //     // console.log(item);
+        //     sum[item.department]=sum[item.department]==undefined?item.salary:sum[item.department]+item.salary;
+        //     console.log(sum);
+        //     return sum;
+        // },{});
+        // console.log(result4);
+       
+
         // 연봉(salary)가 가장높은 직원을 찾아 객체하나만 반환(mdn문서에서 find를 찾아보세요 - !)
+        const max_item = employees.sort((a,b)=>{return b.salary-a.salary;})[0];
+        console.log(max_item);
+
+        //최대값 구하기
+        const max_item2 = employees.find((item)=>{return item.salary==max_item.salary;});
+        console.log(max_item2);
+
+
 
     </script>
 
