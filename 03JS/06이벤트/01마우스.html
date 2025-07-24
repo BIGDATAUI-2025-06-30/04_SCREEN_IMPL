@@ -54,6 +54,9 @@
             height:100px;
             object-fit: cover;
         }
+        .preview::-webkit-scrollbar{
+            display:none;
+        }
     </style>
 
 </head>
@@ -191,7 +194,7 @@
                 const previewEl = document.querySelector('.preview');
                 const newImageEl = document.createElement('img'); //img태그생성
                 newImageEl.src=URL.createObjectURL(file);
-                previewEl.appendChild(newImageEl);
+                previewEl.prepend(newImageEl);
 
             }
 
