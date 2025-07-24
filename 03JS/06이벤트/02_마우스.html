@@ -118,7 +118,7 @@
         let dragedNode = null;
         liEls.forEach((liEl)=>{
             liEl.addEventListener('dragstart',(e)=>{
-                // console.log('dragstart',e.target);
+                console.log('dragstart',e.target);
                 dragedNode = e.target;
                 console.log("dragedNode",dragedNode);
             });
@@ -130,6 +130,12 @@
         boardEl.addEventListener('dragover',(e)=>{
             e.preventDefault();
         });
+        // 우클릭 시 이동 처리
+        boardEl.addEventListener('contextmenu',(e)=>{
+            e.preventDefault();
+        });
+
+
         boardEl.addEventListener('drop',(e)=>{
             e.preventDefault();
             console.log('dropevent',e);
@@ -155,10 +161,7 @@
 
 
 
-        // 우클릭 시 이동 처리
-        boardEl.addEventListener('contextmenu',(e)=>{
-            e.preventDefault();
-        });
+
 
 
         const movingHandler = (e)=>{
