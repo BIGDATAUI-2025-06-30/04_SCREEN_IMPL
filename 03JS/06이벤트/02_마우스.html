@@ -189,7 +189,8 @@
         //마우스 이동 처리 핸들러
         const mouseXYsaveHandler = (e)=>{
             // console.log('mouseXYsaveHandler',e);
-            // 타겟노드의 위치 및 크기 가져오기
+            // 타겟노드의 위치 및 크기 가져오기(뷰포트 기준 )
+            // 반환값 : {left,top,right,bottom,width,height...}
             const rect = targetNode.getBoundingClientRect();
             const width = rect.width;
             const height = rect.height;
