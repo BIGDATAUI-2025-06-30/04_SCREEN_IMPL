@@ -47,6 +47,10 @@
 
         .item>.right {
             border: 1px solid;
+            
+        }
+        .item>.right>a{
+            cursor:pointer;
         }
     </style>
 </head>
@@ -56,7 +60,7 @@
     <input class="insert-value" type="text"> | <a href="javascript:void(0)" class="btn btn-insert">입력</a>
     <hr />
     <div class="container">
-        <div class="item">
+        <!-- <div class="item">
             <div class="left">
                 <input type="text" readonly>
             </div>
@@ -67,7 +71,7 @@
                     </span>
                 </a>
             </div>
-        </div>
+        </div> -->
     </div>
 
 
@@ -104,9 +108,21 @@
                 rightEl.className='right';
                 spanEl.className='material-symbols-outlined';
                 
+                //속성 추가
+                inputEl.setAttribute('readonly',true)
+
                 //데이터 삽입
+                spanEl.innerHTML='delete';
+                inputEl.value=text;
 
                 //노드간 연결
+                leftEl.appendChild(inputEl);
+                aEl.appendChild(spanEl);
+                rightEl.appendChild(aEl);
+
+                itemEl.appendChild(leftEl)
+                itemEl.appendChild(rightEl)
+                containerEl.appendChild(itemEl);
             }
         })
     </script>
