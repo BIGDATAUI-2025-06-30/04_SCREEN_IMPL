@@ -53,7 +53,7 @@
 
 <body>
 
-    <input type="text"> | <a href="javascript:void(0)" class="btn btn-input">입력</a>
+    <input class="insert-value" type="text"> | <a href="javascript:void(0)" class="btn btn-insert">입력</a>
     <hr />
     <div class="container">
         <div class="item">
@@ -70,6 +70,46 @@
         </div>
     </div>
 
+
+    <script>
+        window.addEventListener('DOMContentLoaded',()=>{
+            //전역스코프 요소검색
+            const insertEl = document.querySelector('.insert-value');
+            const insertBtnEl = document.querySelector('.btn-insert');
+            const containerEl = document.querySelector('.container');
+
+            //이벤트 처리 등록
+            insertBtnEl.addEventListener('click',()=>{
+                const text = insertEl.value;
+                //container에 item 추가
+                createNode(text);
+                insertEl.value = "";
+            })
+            //노드추가 함수 생성(Hosting 적용)
+            function createNode(text){
+                //유효성 체크 - !
+
+                //새노드 생성
+                const itemEl = document.createElement('div');
+                const leftEl = document.createElement('div');
+                const inputEl = document.createElement('input');
+
+                const rightEl = document.createElement('div');
+                const aEl = document.createElement('a');
+                const spanEl = document.createElement('span');
+
+                //클래스 적용
+                itemEl.className='item';
+                leftEl.className='left';
+                rightEl.className='right';
+                spanEl.className='material-symbols-outlined';
+                
+                //데이터 삽입
+
+                //노드간 연결
+            }
+        })
+    </script>
 </body>
 
 </html>
