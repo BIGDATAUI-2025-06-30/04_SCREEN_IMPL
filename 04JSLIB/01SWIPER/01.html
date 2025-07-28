@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- SWIPER CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <style>
+        * {}
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {}
+
+        .wrapper>header {}
+
+        .wrapper>main {}
+
+        .wrapper>main>section {}
+
+        .wrapper>main>section.banner>.swiper {
+            min-height: 720px;
+        }
+
+        .wrapper>main>section.banner>.swiper>.swiper-wrapper {
+            height: 100%;
+        }
+
+        .wrapper>main>section.banner>.swiper>.swiper-wrapper>.swiper-slide {
+            height: 100%;
+        }
+
+        .wrapper>main>section.banner>.swiper>.swiper-wrapper>.swiper-slide>a {}
+
+        .wrapper>main>section.banner>.swiper>.swiper-wrapper>.swiper-slide>a>img {}
+    </style>
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <header></header>
+        <main>
+            <section class="banner">
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)">
+                                <img src="./images/1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)">
+                                <img src="./images/2.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)">
+                                <img src="./images/3.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)">
+                                <img src="./images/4.jpg" alt="">
+                            </a>
+                        </div>
+
+                    </div>
+                    <!-- If we need pagination -->
+                    <!-- <div class="swiper-pagination"></div> -->
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <!-- <div class="swiper-scrollbar"></div> -->
+                </div>
+
+            </section>
+        </main>
+        <footer></footer>
+    </div>
+
+
+    <script>
+
+        const swiperBanner = new Swiper('.wrapper>main>section.banner>.swiper', {
+            // Optional parameters
+            direction: 'horizontal', //horizontal(수평 slide) , vertical(수직 slide)
+            autoplay:{
+                delay:2000,
+                pauseOnMouseEnter : true,
+            },
+            loop: true,
+
+            // // If we need pagination
+            // pagination: {
+            //     el: '.swiper-pagination',
+            // },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.wrapper>main>section.banner>.swiper .swiper-button-next',
+                prevEl: '.wrapper>main>section.banner>.swiper .swiper-button-prev',
+            },
+
+            // // And if we need scrollbar
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
+
+        })
+
+    </script>
+
+</body>
+
+</html>
