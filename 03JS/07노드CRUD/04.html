@@ -93,7 +93,7 @@
                 insertEl.value = "";
             })
             insertEl.addEventListener('keydown', (e) => {
-                //console.log(e);
+                
                 if (e.keyCode == 13) {
                     const text = insertEl.value;
                     if (!isValid(text))
@@ -107,7 +107,6 @@
 
             //노드추가 함수 생성(Hosting 적용)
             function createNode(text) {
-                //유효성 체크 - !
 
                 //새노드 생성
                 const itemEl = document.createElement('div');
@@ -152,6 +151,7 @@
             function isValid(text) {
                 const regex = /^[0-9]/;
                 //공백여부 확인
+                console.log(typeof text.trim());
                 if (text.trim() === '' || text.trim() === null) {
                     alert("내용을 입력하세요");
                     return false;
