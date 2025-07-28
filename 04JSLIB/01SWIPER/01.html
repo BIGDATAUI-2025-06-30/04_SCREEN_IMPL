@@ -15,7 +15,11 @@
                 'FILL' 0,
                 'wght' 400,
                 'GRAD' 0,
-                'opsz' 24
+                'opsz' 48;
+            
+            font-size:2.5rem;
+            border : 3px solid ;
+            border-radius: 50%;
         }
     </style>
     <!-- SWIPER CDN -->
@@ -105,6 +109,16 @@
             font-weight: 800;
             color: white;
         }
+        .start-stop-toggle{
+            position:absolute;
+            top:79%;
+            left:calc(15.625vw + 10px);
+            z-index: 100;
+            cursor: pointer;
+            color : white;
+            transition : .3s;
+            
+        }
 
         /* .swiper-scrollbar{
             background-color: white;
@@ -161,7 +175,8 @@
                     <!-- stop/start button  -->
                     <div class="start-stop-toggle">
                         <span class="material-symbols-outlined">
-                            pause
+                            <!-- pause -->
+                             play_arrow
                         </span>
                     </div>
                     <!-- If we need scrollbar -->
@@ -181,7 +196,7 @@
             direction: 'horizontal', //horizontal(수평 slide) , vertical(수직 slide)
             autoplay: {
                 delay: 2000,
-                pauseOnMouseEnter: true,
+                // pauseOnMouseEnter: true,
             },
             loop: true,
             effect: "slide", // slide(기본),fade , scroll, cube, coverflow , flip
@@ -206,6 +221,22 @@
             // },
 
         })
+
+        //토글버튼 만들기
+        const playPauseBtn = document.querySelector('.start-stop-toggle span');
+        let isPlaying = true;
+        playPauseBtn.addEventListener('click',()=>{
+            if(isPlaying){
+                playPauseBtn.innerHTML='pause';
+                swiperBanner.autoplay.stop();
+                isPlaying = false;
+            }else{
+                playPauseBtn.innerHTML='play_arrow';
+                swiperBanner.autoplay.start();
+                isPlaying = true;
+            }
+        });
+
 
     </script>
 
