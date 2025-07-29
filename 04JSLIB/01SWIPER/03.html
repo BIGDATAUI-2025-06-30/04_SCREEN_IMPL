@@ -27,7 +27,9 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <style>
-        * {}
+        * {
+            box-sizing: border-box;
+        }
 
         body {
             margin: 0;
@@ -149,6 +151,50 @@
         .wrapper>main>section.banner>.swiper>.swiper-wrapper>.swiper-slide>a {}
 
         .wrapper>main>section.banner>.swiper>.swiper-wrapper>.swiper-slide>a>img {}
+
+
+        /* multi slider */
+        .wrapper>main>section.multi-slider {
+            border: 1px solid;
+            min-height: 500px;
+        }
+
+        .wrapper>main>section.multi-slider>.swiper {
+            height: 500px;
+        }
+
+        .wrapper>main>section.multi-slider>.swiper>.swiper-wrapper {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .wrapper>main>section.multi-slider>.swiper>.swiper-wrapper>.swiper-slide {
+            width: 250px;
+            height: 250px;
+            border: 1px solid;
+            transition: .3s;
+        }
+
+        .wrapper>main>section.multi-slider>.swiper>.swiper-wrapper>.swiper-slide>a {}
+
+        .wrapper>main>section.multi-slider>.swiper>.swiper-wrapper>.swiper-slide>a>img {}
+
+        .wrapper>main>section.multi-slider .swiper-slide-active{
+            background-color: orange;
+            transform: scale(1.5);
+            z-index:2;
+        }
+        .wrapper>main>section.multi-slider .swiper-slide-prev{
+            transform: scale(1.2);
+            background-color: white;
+            z-index:1;
+        }
+        .wrapper>main>section.multi-slider .swiper-slide-next{
+            transform: scale(1.2);
+            background-color: white;
+            z-index:1;
+        }
     </style>
 </head>
 
@@ -219,9 +265,66 @@
                     <!-- <div class="swiper-scrollbar"></div> -->
                 </div>
             </section>
-            
+
             <!-- Multislider -->
-            <section></section>
+            <section class="multi-slider">
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)"> <img src="" alt=""> </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)"> <img src="" alt=""> </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)"> <img src="" alt=""> </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)"> <img src="" alt=""> </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)"> <img src="" alt=""> </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)"> <img src="" alt=""> </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)"> <img src="" alt=""> </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)"> <img src="" alt=""> </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)"> <img src="" alt=""> </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)"> <img src="" alt=""> </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)"> <img src="" alt=""> </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)"> <img src="" alt=""> </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)"> <img src="" alt=""> </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)"> <img src="" alt=""> </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)"> <img src="" alt=""> </a>
+                        </div>
+
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                </div>
+            </section>
 
         </main>
         <footer></footer>
@@ -280,11 +383,32 @@
         const noticeSwiper = new Swiper('.top-header .swiper', {
             // Optional parameters
             direction: 'vertical',
+            autoplay: {
+                delay: 2000,
+            },
+            loop: true,
+            mousewheel: true,
+        });
+
+        //
+        const swiper = new Swiper('.multi-slider .swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
             autoplay:{
                 delay:2000,
             },
-            loop: true,
-            mousewheel:true,
+            //multislider
+            slidesPerView:4,
+            centeredSlides : true,
+            // spaceBetween : 20,
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.multi-slider .swiper-button-next',
+                prevEl: '.multi-slider .swiper-button-prev',
+            },
+
         });
 
     </script>
