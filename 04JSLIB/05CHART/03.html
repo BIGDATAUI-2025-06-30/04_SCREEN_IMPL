@@ -129,13 +129,22 @@
             }
         }
         new Chart(ctx, {
-            type: 'bar',    //bar , line , pie , doughnut ,// bubble , scatter , heatmap...
+            type: 'line',
             data: {
-                labels: ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Navy'],
-                datasets: dataSet,
-
+                labels: Object.keys(cat_count),
+                datasets: [{
+                    label: 'COUNT',
+                    data: Object.values(cat_count),
+                    borderWidth: 1
+                }]
             },
-            options: option
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
         });
     </script>
 
