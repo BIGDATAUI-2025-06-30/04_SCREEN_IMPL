@@ -16,7 +16,7 @@ a{text-decoration: none;color:black;}
 /*  */
 .wrapper>main>section.banner-block .carousel-control-prev,
 .wrapper>main>section.banner-block .carousel-control-next{
-    border : 5px solid white;
+    /* border : 5px solid white; */
     font-size : 5rem !important;
 }
 .carousel-control-prev-icon,
@@ -24,9 +24,24 @@ a{text-decoration: none;color:black;}
 {
     width : 48px;
     height : 48px;
-    background-color: red;
+    /* background-color: red; */
     border-radius: 50%;
 }
 
+/*  */
+.wrapper>main>section.card-block{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    /* border : 5px solid red; */
+    gap:15px;
+
+    /*  */
+    place-items: center;
+    padding : 50px 0;
+}
+
+.wrapper>main>section.navtab-block  .tab-content{
+    min-height : 300px;
+}
 /*  */
 .wrapper>footer{}
